@@ -32,15 +32,29 @@ body {
     color: #434455;
     background-color: #ffffff;
 }
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 header {
     padding-block: 24px;
     background: #fff;
 }
-.header-navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header-container {
+        width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 }
+.header-navigation {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
 .header-logo {
     font-weight: 700;
     font-size: 18px;
@@ -67,14 +81,13 @@ header {
     color: #2e2f42;
 }
 .header-adress {
+    margin-left: auto;
 }
 
 .header-adress-item {
     align-items: center;
-    justify-content: space-between;
     display: flex;
     gap: 40px;
-    margin-right: auto;
 }
 
 .header-adress-list {}
@@ -86,18 +99,16 @@ header {
     color: #434455;}
 .hero {
     background: #2e2f42;
-}
-.container-hero {
-padding-block: 188px;
+    padding: 188px 0;
+    text-align: center;
 }
 .hero-title {
     color: #fff;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     max-width: 496px;
-    border-width: 472px;
     margin: 0 auto;
     text-align: center;
 
@@ -120,13 +131,7 @@ padding-block: 188px;
     margin-top: 48px;
 }
 .features {
-}
-.container-features {
-padding-top: 156px;
-padding-bottom: 156px;
-display: flex;
-gap: 24px;
-width: calc((100% - 72px * 3) / 4);
+    padding: 120px 0;
 }
 .visually-hidden {
     position: absolute;
@@ -143,18 +148,10 @@ width: calc((100% - 72px * 3) / 4);
 .features-list {
     display: flex;
     gap: 24px;
-    padding-lefta: auto;
-    padding-right: auto;
-    display: flex;
-}
-.container {
-    width: 1128px;
-    margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    align-items: flex-start;
 }
 .features-item {
-max-width: 264px;
+width: calc((100% - 72px) / 4);
 }
 
 
@@ -176,7 +173,8 @@ max-width: 264px;
 
 .team {
     background: #f4f4fd;
-    padding-block: 120px; 
+    padding-top: 120px;
+    padding-bottom: 120px; 
 }
 
 .team-title {
@@ -192,7 +190,6 @@ max-width: 264px;
 }
 
 .team-list {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     display: flex;
     gap: 24px;
 }
@@ -200,11 +197,16 @@ max-width: 264px;
 .team-item {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
-    padding: 0 16px 120px 16px ;
+    padding: 0;
+    flex-basis: calc((100% - 72px) / 4);
+    box-sizing: border-box;
 }
 
 .team-img {
 margin-bottom: 32px;
+}
+.team-content {
+    padding: 32px 16px;
 }
 
 .team-subtitles {
@@ -227,6 +229,14 @@ margin-bottom: 32px;
 .portfolio {
 padding-block: 120px;
 }
+.portfolio-content {
+border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    padding: 32px 16px;
+    width: 360px;
+    height: 120px
+}
 
 .portfolio-title {
     font-weight: 700;
@@ -238,20 +248,16 @@ padding-block: 120px;
     margin: 0 auto;
     margin-bottom: 72px;
 }
+.portfolio-item {
+    width: calc((100% - 48px) / 3);
+}
+
 
 .portfolio-list {
-    background: #fff;
     display: flex;
     flex-wrap: wrap;
+    gap: 48px 24px;
 }
-
-.portfolio-item {
-    width: calc((100% - 48px * 2) / 3);
-}
-
-.portfolio-img {
-
-    }
 
 .portfolio-subtitles {
     font-weight: 500;
@@ -270,22 +276,26 @@ padding-block: 120px;
 
 .footer {
 background: #2e2f42;
+padding: 100px 0;
 
 }
 .footer-container {
-    padding-block: 100px;
-    max-width: 264px;
-    margin-left: 178px;
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.footer-logo {font-weight: 700;
+.footer-logo {
+    font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
     font-family: "Raleway", sans-serif;
-    
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-left: 70px;
 }
 
 .footer-logo-italic {
@@ -297,5 +307,6 @@ background: #2e2f42;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    margin-top: 16px;
+    max-width: 264px;
+    margin-left: 70px;
 }
